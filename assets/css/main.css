@@ -1,0 +1,183 @@
+/** Main Corporate Color **/
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
+.transition {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  color: #DA4C43;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+a:hover {
+  color: #ADD2CA;
+  text-decoration: underline;
+  text-decoration-style: dashed;
+}
+/** SVG IMAGES **/
+svg#bracket path {
+  fill: #ADD2CA;
+}
+#github-logo {
+  display: inline-block;
+  margin: 0px;
+}
+#logo_footer {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+#morse-code {
+  margin-top: 40px;
+}
+#morse-code circle,
+#morse-code rect {
+  fill: #DA4C43;
+}
+img,
+svg#logo {
+  max-width: 100%;
+  margin: 0px auto;
+  display: block;
+  height: auto;
+}
+/** main style **/
+body {
+  width: 100%;
+  margin: 0px auto;
+  box-sizing: border-box;
+  font-family: "Open sans", Arial, sans-serif;
+}
+body strong,
+body .strong {
+  font-weight: 800;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  font-weight: 800;
+}
+body section {
+  min-height: 100vh;
+  text-align: center;
+}
+body section h2 {
+  font-family: "Open sans", Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #58595B;
+}
+body section:first-child {
+  padding-top: 10vh;
+}
+body section:nth-child(2) {
+  background: #939598;
+  padding: 40px 0px;
+}
+body section:nth-child(2) p#introduction {
+  padding: 0px 15px;
+  color: white;
+  font-size: 18px;
+  line-height: 200%;
+}
+body .service-box {
+  width: 100%;
+}
+body .service-box h3 {
+  text-transform: uppercase;
+  width: 100%;
+  color: #ADD2CA;
+  margin-top: 20px;
+}
+body .service-box h3 + .service-description {
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+body footer {
+  background: #231F20;
+  color: white;
+  padding: 60px 0px;
+  width: 100%;
+}
+body footer .footer-column {
+  float: left;
+  clear: none;
+  width: 100%;
+  padding: 0px 15px;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 160%;
+}
+body footer .footer-column address {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 160%;
+}
+body footer .footer-column .footer-link {
+  text-align: right;
+  vertical-align: middle;
+}
+@media screen and (min-width: 960px) {
+  body p#introduction {
+    width: 60%;
+    margin: 60px auto;
+  }
+  body svg {
+    display: block;
+    clear: both;
+    margin: 0px auto;
+  }
+  body .service-box {
+    display: block;
+    float: left;
+    clear: none;
+    width: 25%;
+  }
+  body .service-box h3 {
+    float: left;
+    margin-top: 20px;
+  }
+  body .service-box h3 + .service-description {
+    padding: 20px 30px;
+    margin: 0px;
+    color: white;
+    text-align: left;
+    display: block;
+    float: left;
+  }
+  body footer {
+    width: 100%;
+  }
+  body footer .footer-column {
+    width: 33.3333%;
+    padding: 0px 15px;
+  }
+}

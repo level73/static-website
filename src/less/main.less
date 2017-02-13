@@ -1,0 +1,159 @@
+@import 'variables.less';
+@import 'mixins.less';
+@import 'grid.less';
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: @firebrick;
+  .transition;
+  &:hover {
+    color: @seagreen;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+  }
+}
+
+/** SVG IMAGES **/
+svg#bracket {
+  path {
+    fill: @seagreen;
+  }
+}
+#github-logo {
+  display: inline-block;
+  margin: 0px;
+}
+#logo_footer {
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+#morse-code {
+  margin-top: 40px;
+  circle, rect { fill: @firebrick; }
+}
+img, svg#logo {
+  max-width: 100%;
+  margin: 0px auto;
+  display: block;
+  height: auto;
+}
+
+/** main style **/
+body {
+  width: 100%;
+  margin: 0px auto;
+  box-sizing: border-box;
+  font-family: "Open sans", Arial, sans-serif;
+  strong, .strong { font-weight: 800; }
+  h1, h2, h3, h4, h5, h6 {
+    .strong;
+  }
+  section {
+    min-height: 100vh;
+    text-align: center;
+    h2 {
+      font-family: "Open sans", Arial, sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: @concrete;
+    }
+
+    &:first-child {
+      padding-top: 10vh;
+    }
+    &:nth-child(2) {
+      background: @granite;
+      padding: 40px 0px;
+      p#introduction {
+        padding: 0px 15px;
+        color: white;
+        font-size: 18px;
+        line-height: 200%;
+
+      }
+    }
+  }
+  .service-box {
+    width: 100%;
+    h3 {
+      text-transform: uppercase;
+      width: 100%;
+      color: @seagreen;
+      margin-top: 20px;
+      & + .service-description {
+        padding: 10px;
+        width: 100%;
+        color: white;
+      }
+    }
+  }
+  footer {
+    background: @nightblack;
+    color: white;
+    padding: 60px 0px;
+    width: 100%;
+    .footer-column {
+      float: left;
+      clear: none;
+      width: 100%;
+      padding: 0px 15px;
+      font-size: 14px;
+      font-style: normal;
+      line-height: 160%;
+      address {
+        font-size: 14px;
+        font-style: normal;
+        line-height: 160%;
+      }
+
+      .footer-link {
+        text-align: right;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 960px){
+  body {
+
+    p#introduction {
+      width: 60%;
+      margin: 60px auto;
+    }
+    svg {
+      display: block;
+      clear: both;
+      margin: 0px auto;
+
+    }
+    .service-box {
+      display: block;
+      float: left;
+      clear: none;
+      width: 25%;
+      h3 {
+        float: left;
+        margin-top: 20px;
+        & + .service-description {
+          padding: 20px 30px;
+          margin: 0px;
+          color: white;
+          text-align: left;
+          display: block;
+          float: left;
+        }
+      }
+    }
+    footer {
+      width: 100%;
+      .footer-column {
+        width: 33.3333%;
+        padding: 0px 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "lvl73",
+  "version": "1.0.0",
+  "description": "LVL73 simple landing page",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/level73/static-website.git"
+  },
+  "keywords": [
+    "html5",
+    "simple",
+    "website"
+  ],
+  "author": "Alan Zard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/level73/static-website/issues"
+  },
+  "homepage": "https://github.com/level73/static-website#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-less": "^1.4.0",
+    "grunt-contrib-uglify": "^2.1.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
