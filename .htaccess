@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.(png|css|jpg|jpeg|gif|js|less|scss|eot|svg|ttf|otf|woff|ico)$
+RewriteCond %{REQUEST_FILENAME}.htm -f
+RewriteRule ^(.+)/$ $1.htm [L]

@@ -1,11 +1,9 @@
 @import 'variables.less';
 @import 'mixins.less';
-@import 'grid.less';
 
 * {
   box-sizing: border-box;
 }
-
 a {
   color: @firebrick;
   .transition;
@@ -15,11 +13,15 @@ a {
     text-decoration-style: dashed;
   }
 }
-
 /** SVG IMAGES **/
 svg#bracket {
   path {
     fill: @seagreen;
+  }
+}
+svg#bracket-2 {
+  path {
+    fill: @firebrick;
   }
 }
 #github-logo {
@@ -31,7 +33,7 @@ svg#bracket {
   margin-bottom: 10px;
 }
 #morse-code {
-  margin-top: 40px;
+  margin: 40px auto;
   circle, rect { fill: @firebrick; }
 }
 img, svg#logo {
@@ -40,7 +42,6 @@ img, svg#logo {
   display: block;
   height: auto;
 }
-
 /** main style **/
 body {
   width: 100%;
@@ -60,21 +61,27 @@ body {
       text-transform: uppercase;
       color: @concrete;
     }
-
+    p.introduction {
+      padding: 0px 15px;
+      color: @nightblack;
+      font-size: 18px;
+      line-height: 200%;
+    }
     &:first-child {
       padding-top: 10vh;
     }
     &:nth-child(2) {
       background: @granite;
       padding: 40px 0px;
-      p#introduction {
-        padding: 0px 15px;
+      p.introduction {
         color: white;
-        font-size: 18px;
-        line-height: 200%;
-
       }
     }
+    &:nth-child(3) {
+      padding: 40px 0px;
+    }
+
+
   }
   .service-box {
     width: 100%;
@@ -83,13 +90,18 @@ body {
       width: 100%;
       color: @seagreen;
       margin-top: 20px;
-      & + .service-description {
+      & ~ .service-description {
         padding: 10px;
         width: 100%;
         color: white;
       }
     }
   }
+  .process-box {
+    color: @firebrick;
+
+  }
+
   footer {
     background: @nightblack;
     color: white;
@@ -103,12 +115,12 @@ body {
       font-size: 14px;
       font-style: normal;
       line-height: 160%;
+      text-align: center;
       address {
         font-size: 14px;
         font-style: normal;
         line-height: 160%;
       }
-
       .footer-link {
         text-align: right;
         vertical-align: middle;
@@ -116,11 +128,9 @@ body {
     }
   }
 }
-
 @media screen and (min-width: 960px){
   body {
-
-    p#introduction {
+    p.introduction {
       width: 60%;
       margin: 60px auto;
     }
@@ -138,7 +148,7 @@ body {
       h3 {
         float: left;
         margin-top: 20px;
-        & + .service-description {
+        & ~ .service-description {
           padding: 20px 30px;
           margin: 0px;
           color: white;
@@ -148,11 +158,20 @@ body {
         }
       }
     }
+    .process-box {
+      display: block;
+      float: left;
+      clear: none;
+      width: 33.3333%;
+    }
     footer {
       width: 100%;
       .footer-column {
         width: 33.3333%;
         padding: 0px 15px;
+        address {
+          text-align: left; 
+        }
       }
     }
   }
